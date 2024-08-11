@@ -27,7 +27,7 @@
    - <a href="https://gnuwin32.sourceforge.net/packages/make.htm">For Windows</a>
    - For Linux, run this command `sudo apt-get update`
 
-4. Add the environment files, and add there the necessary variable names, refer to config file for the required and optional variable names under src/utils/config/index.ts
+4. Add the environment file, and add the the necessary variable names, refer to config file for the required and optional variable names under `src/utils/config/index.ts`
 
    **Env file names**
 
