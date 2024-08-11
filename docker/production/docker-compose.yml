@@ -1,0 +1,15 @@
+services:
+  app:
+    container_name: jenkins-app
+    build:
+      context: ../..
+      dockerfile: docker/production/Dockerfile
+    image: mondejarmarron18/jenkins-app
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+    env_file:
+      - ../../.env.prod
+    ports:
+      - 80:5000
+    restart: unless-stopped
