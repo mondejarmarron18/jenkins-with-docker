@@ -9,6 +9,7 @@
 - Docker
 - Jenkins
 - Make
+- PM2
 
 ## How to run
 
@@ -18,7 +19,8 @@
 
    - <a href="https://docs.docker.com/compose/install">For Windows</a>
    - <a href="https://docs.docker.com/compose/install/linux">For Linux</a>
-     **Note:** Make sure to install the "plugin" version for linux
+
+**Note:** Make sure to install the "plugin" version for linux
 
 3. Install "make" utility as we need it to run the docker compose commands
 
@@ -35,4 +37,5 @@
 5. Start up the container by running the command:
    - `make prod` for production
    - `make dev` for development
-     **Note:** production docker container will run on detach mode
+
+**Note:** In production, docker container will run in detach mode
