@@ -1,4 +1,4 @@
-<img src="/src/assets/images/banner.png" style="background-color:white;"/>
+<img src="/src/assets/images/banner.png"/>
 
 # Jenkins with Docker Container Practice
 

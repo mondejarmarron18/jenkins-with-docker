@@ -5,16 +5,19 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon -L src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "vitest": "^2.0.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@vitest/coverage-v8": "^2.0.5",
     "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"

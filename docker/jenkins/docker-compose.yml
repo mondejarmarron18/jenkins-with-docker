@@ -1,0 +1,11 @@
+services:
+  cicd:
+    container_name: jenkins-cicd
+    image: jenkins/jenkins:jdk17
+    ports:
+      - 8080:8080
+    volumes:
+      - jenkins:/var/jenkins_home
+
+volumes:
+  jenkins:
