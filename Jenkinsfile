@@ -1,8 +1,14 @@
-node {
-    stage {
-        git url: 'https://github.com/mondejarmarron18/jenkins-app.git', branch: 'main'
+pipeline {
+    agent any
+
+    stage("Checkout") {
+        steps {
+            git url: 'https://github.com/mondejarmarron18/jenkins-app.git', branch: 'main'
+        }
     }
-    stage {
-        echo "Hello World!"
+    stage("Complete") {
+        steps {
+            echo "Hello World!"
+        }
     }
 }
