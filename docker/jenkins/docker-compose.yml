@@ -1,7 +1,10 @@
 services:
   cicd:
     container_name: jenkins
-    image: jenkins/jenkins:2.473-jdk17
+    build:
+      context: ../..
+      dockerfile: docker/jenkins/Dockerfile
+    image: mondejarmarron18/jenkins
     ports:
       - 8080:8080
     volumes:
