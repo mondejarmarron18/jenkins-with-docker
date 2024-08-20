@@ -13,16 +13,20 @@ pipeline {
                 script {
                     try {
                         sh "make prod"
-                    } catch (err) {
-                        echo "Error: ${err}"
+                    } catch (Exception err) {
+                        error "Build failed: ${err}"
                     }
                 }
             }
         }
-        stage("Complete") {
-            steps {
-                echo "Successfully deployed!"
-            }
+    }
+
+    post {
+        success {
+            echo "Build succeeded!"
+        }
+        failure {
+            echo "Build failed!"
         }
     }
 }
