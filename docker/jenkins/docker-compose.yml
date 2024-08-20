@@ -1,7 +1,7 @@
 services:
   cicd:
     container_name: jenkins
-    image: jenkins/jenkins:2.472-jdk17
+    image: jenkins/jenkins:2.473-jdk17
     ports:
       - 8080:8080
     volumes:

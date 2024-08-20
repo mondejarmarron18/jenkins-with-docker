@@ -7,9 +7,15 @@ pipeline {
                 git url: 'https://github.com/mondejarmarron18/jenkins-with-docker.git', branch: 'main'
             }
         }
+
+        stage("Build") {
+            steps {
+                sh "make prod"
+            }
+        }
         stage("Complete") {
             steps {
-                echo "Hello Worlds!"
+                echo "Successfully deployed!"
             }
         }
     }
