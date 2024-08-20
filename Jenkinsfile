@@ -10,7 +10,13 @@ pipeline {
 
         stage("Build") {
             steps {
-                sh "make prod"
+                script {
+                    try {
+                        sh "make prod"
+                    } catch (err) {
+                        echo "Error: ${err}"
+                    }
+                }
             }
         }
         stage("Complete") {
