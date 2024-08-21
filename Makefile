@@ -4,7 +4,7 @@ dev:
 
 prod: 
 	@echo "Starting production environment"
-	docker compose -p jenkins-app -f docker/production/docker-compose.yml up --build -d
+	docker compose -f docker/production/docker-compose.yml up --build -d
 
 test:
 	@echo "Starting test environment"
