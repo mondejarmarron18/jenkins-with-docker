@@ -24,7 +24,6 @@ pipeline {
     post {
         success {
             emailext (
-                name: 'Jenkins',
                 to: 'mondejarmarron18@gmail.com',
                 subject: 'Jenkins Build Succeeded',
                 body: 'The Jenkins build was successful.',
@@ -33,7 +32,6 @@ pipeline {
         }
         failure {
             emailext (
-                name: 'Jenkins',
                 to: 'mondejarmarron18@gmail.com',
                 subject: 'Jenkins Build Succeeded',
                 body: 'The Jenkins build was successful.',
