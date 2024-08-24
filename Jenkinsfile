@@ -22,11 +22,25 @@ pipeline {
     }
 
     post {
+        always {
+            echo "Build completed"
+        }
         success {
-            echo "Build succeeded!"
+            emailext (
+                to: 'mondejarmarron18@gmail.com',
+                subject: 'Jenkins Build Succeeded',
+                body: 'The Jenkins build was successful.',
+                attachLog: true
+            )
         }
         failure {
-            echo "Build failed!"
+            emailext (
+                to: 'mondejarmarron18@gmail.com',
+                subject: 'Jenkins Build Succeeded',
+                body: 'The Jenkins build was successful.',
+                attachLog: true
+            )
         }
+    
     }
 }

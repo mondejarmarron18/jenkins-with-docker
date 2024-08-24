@@ -5,7 +5,11 @@ const app = express();
 const port = config.port;
 
 app.get("/", (req, res) => {
-  res.send("Hello Worlds!");
+  res.send("Hello World!");
+});
+
+app.get("/jenkins", (req, res) => {
+  res.send("Hello Jenkins!");
 });
 
 app.listen(port, () => {
