@@ -8,6 +8,18 @@ pipeline {
             }
         }
 
+        stage("Test") {
+            steps {
+                script {
+                    try {
+                        sh "make test"
+                    } catch (Exception err) {
+                        error "Test failed: ${err}"
+                    }
+                }
+            }
+        }
+
         stage("Build") {
             steps {
                 script {
