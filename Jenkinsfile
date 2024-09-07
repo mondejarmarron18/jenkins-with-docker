@@ -34,6 +34,9 @@ pipeline {
     }
 
     post {
+        always {
+            cleanWs()
+        }
         success {
             emailext (
                 to: 'mondejarmarron18@gmail.com',
